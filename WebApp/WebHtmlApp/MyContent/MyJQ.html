@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /*CSS*/
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="row">My First JS & JQ</div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p id="P1"></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="P2"></p>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <div class="row"></div>
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="row">Get</div>
+                <div class=" row"><p id="test">This is some <b>bold</b> text in a paragraph.</p></div>
+
+                <div class="row"><input type="text" id="name"></div>
+                <br />
+                <div class="row">
+
+
+                    <div class="col-sm-4"><button id="btn3">Show Value</button></div>
+                    <div class="col-sm-4"><button id="btn1">Show Text</button></div>
+                    <div class="col-sm-4"><button id="btn2">Show HTML</button></div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <div class="row">Set</div>
+                <div class=" row"><p id="testSet"></p></div>
+
+                <div class="row"><input type="text" id="name2"></div>
+                <br />
+                <div class="row">
+
+
+                    <div class="col-sm-4"><button id="btn4">Set Value</button></div>
+                    <div class="col-sm-4"><button id="btn5">Set Text</button></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+<script>
+
+    //JS
+    document.getElementById("P1").innerHTML = "My JS";
+    //$(selector).action(handler);
+
+    $(document).ready(function () {
+
+        //
+        $("#P2").text("My JQ");
+        // get
+
+        $("#btn1").click(function() {
+            alert( $("#test").text());
+        });
+
+        $("#btn2").click(function () {
+            alert($("#test").html());
+        });
+
+        $("#btn3").click(function () {
+            var name = $("#name").val();
+            alert(name);
+        });
+
+        // Set
+        $("#btn4").click(function () {
+            $("#name2").val("Rimon Pasha");
+            
+        });
+
+        $("#btn5").click(function () {
+            $("#testSet").text("Rimon Pasha");
+
+        });
+
+
+    });
+
+
+    
+
+</script>
+</body>
+</html>
